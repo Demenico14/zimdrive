@@ -1,0 +1,135 @@
+[
+  {
+    "title": "Road Rules",
+    "icon": "alt-route",
+    "content": [
+      "No car should turn right in the face of oncoming traffic",
+      "Give way to traffic coming from your right.",
+      "Any car can move to the centre if it has no car coming from its right. (N.B.- such a car will always be 2nd to leave intersection)",
+      "Traffic in the same road moves at the same time. N.B.- Applies if none of them is turning right.",
+      "At a Round About, give way to traffic already circulating. (Then apply rule 2).",
+      "Any car facing a stop or give way sign, is the last car to go."
+    ]
+  },
+  {
+    "title": "Question Help",
+    "icon": "help-outline",
+    "content": [
+      "Fog light are used when there is a heavy mist/bad weather",
+      "You can overtake animal drawn vehicle by whichever side is safe",
+      "At a round-about you give way to traffic already circulating",
+      "Regulatory signs are also called Mandatory signs",
+      "At a narrow bridge you consider width",
+      "On a straight ahead lane you should not turn at all",
+      "When travelling at 60km/h I leave a gap of 4 cars",
+      "When travelling at 90km/h I leave a gap of 6 cars",
+      "60km/h is the general speed limit in urban areas",
+      "A red reflective triangle should be placed at 30\u201350 behind a broken vehicle",
+      "You engage to lower gear when going down a hill",
+      "A circle regulates traffic and a triangle warns traffic",
+      "A motor-cycle is permitted to carry not more than one passenger",
+      "On a bridge one should not overtake",
+      "At a flashing amber you give right of way to traffic on your right",
+      "Derestriction means the imposed speed limit has been canceled",
+      "Direction arrows used in conjunctions with prohibition lines have a regulatory effect",
+      "At a corner vehicles are allowed to park about 7,5m from the corner",
+      "We use the right foot on accelerator and left on clutch. ABC = accelerator + brakes + clutch",
+      "Hand/park brake is used to keep the vehicle stationary",
+      "Missing out some gear changes save fuel because it reduces the amount of time you accelerate",
+      "When you meet an obstruction on your side of the road you give the right of way to oncoming traffic",
+      "We usually look for motorists and cyclist at a junction because they are harder to see",
+      "The legal age for a female applicant to drive a heavy vehicle is 18 years",
+      "You put on park lights when parked at a lay-by",
+      "When parked on the side of the road you use park lights, side lights and tail light",
+      "A green light at a robot controlled intersection means go if safe to do so",
+      "A seat belt is not necessary when reversing",
+      "A restriction sign signifies that I should not exceed the stated speed",
+      "Weight is usually associated with weigh bridges",
+      "Reflectors are put white-front, red-back and yellow-sides",
+      "Diverging lines are one which form two",
+      "You may straddle the yellow broken line when overtaking traffic turning right or stop when you want to pull over",
+      "Broken yellow line is also called edge line",
+      "Cyclists using a road must ride in a single file",
+      "In rural areas we give way to traffic already at the intersection",
+      "Filling your car with petrol at a filling station one must switch off the engine"
+    ]
+  },
+  {
+    "title": "General Notes",
+    "icon": "menu-book",
+    "content": [
+      "The horn/hooter should be used to warn pedestrians or public or other users of danger",
+      "We have five road signs in Zimbabwe namely: I. Danger warning II. Regulatory III. Informative IV. Traffic light signals V. Carriage markings",
+      "The rule of the road is keep to the left and give way to any vehicle on your right",
+      "Never turn right in front of oncoming vehicle",
+      "Controlled intersection is one which is controlled by stop or give way sign, robot or police",
+      "Uncontrolled is one which is not controlled by stop or give way but, the rule is give way to vehicle on your right",
+      "On Zebra variety you STOP then give precedence to pedestrians",
+      "Prohibition lines indicates that you should not overtake",
+      "Ambulances, fire brigade vehicles have the right of way when sounding their sirens",
+      "When travelling at a low speed you use the left lane",
+      "Blind spot means a portion not covered by your mirror",
+      "Clutch pedal helps to avoid noise when changing gears",
+      "Most important aspect in a bus is the passenger",
+      "When you run-over a dog in rural areas you stop and try to find the owner",
+      "When involved in an accident you report to the police within 24hrs",
+      "We indicate when going out at a round-about",
+      "In rural areas you give right of way to any vehicle that enters the junction before you",
+      "Transverse lines are also called stop lines"
+    ]
+  },
+  {
+    "title": "STOP Sign Notes",
+    "icon": "pan-tool",
+    "content": [
+      "Stop immediately behind the stop line",
+      "I will stop for traffic from all directions",
+      "Stop sign means stop whether the road is clear or not",
+      "Give precedence to all crossing traffic"
+    ]
+  },
+  {
+    "title": "GIVE WAY Sign Notes",
+    "icon": "signpost",
+    "content": [
+      "Give way to all crossing traffic from any direction",
+      "At give way sign you do not necessary have to stop if the road is clear",
+      "DERESTRICTION SIGN \u2013 found only in the informative"
+    ]
+  },
+  {
+    "title": "Vehicles, Licensing & Miscellaneous",
+    "icon": "directions-car",
+    "content": [
+      "To drive a PSV one has to reach 25 years.",
+      "Motor cycle does not carry fire-extinguisher",
+      "Motor cycle doesn\u2019t have a reverse gear.",
+      "A truck towing two trailers has three reflectors.",
+      "The correct sequence of a robot light is amber, red, and green.",
+      "A heavy vehicle towing two trailers carries two red triangles.",
+      "When a heavy vehicle has broken down I will place a red reflective triangle 30m\u201350m.",
+      "When involved in a serious accident I should report immediately to the police within 24hrs.",
+      "The overall stopping distance at 120km/h is 130m.",
+      "The reaction distance at 60km/h is 8,3m.",
+      "If you see that an oncoming vehicle does not dip its light you cast out your eyes slightly to the left.",
+      "When you see continuous white line you should not straddle the line or overtake.",
+      "I switch on my headlight 5:30pm to 6:00am.",
+      "Using rear fog light in clear daylight I will dazzle other drivers.",
+      "When driving behind other car I will dip my head lights or put into low beam."
+    ]
+  },
+  {
+    "title": "Vehicle Classes",
+    "icon": "category",
+    "content": [
+      "CLASS 1 \u2014 Buses",
+      "CLASS 2 \u2014 Lorries",
+      "CLASS 3 \u2014 Motor cycles",
+      "CLASS 4 \u2014 Light motor vehicles",
+      "CLASS 5 \u2014 Tractors and Caterpillars",
+      "Applicants for classes 1, 2 and 5 must be above the age of 18, while classes 3 and 4 requires the age of 16 years and above. A heavy vehicle is a vehicle that exceeds 2300 kilograms.",
+      "Sequence of a robot R.G.A Not a sequence of a robot R.A.G",
+      "Correct sequence of a robot G.A.R and A.R.G Not correct sequence A.G.R and G.R.A"
+    ]
+  }
+]

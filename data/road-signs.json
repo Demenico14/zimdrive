@@ -1,0 +1,613 @@
+[
+  {
+    "title": "Danger Warning Signs",
+    "subtitle": "Class A",
+    "classCode": "Class A",
+    "description": "Danger warning signs alert drivers to potential hazards ahead. They are triangular with a red border and white/yellow background.",
+    "shape": "triangle",
+    "shapeColor": "#DC2626",
+    "shapeFill": "#FEF3C7",
+    "imageFolder": "Class_A",
+    "signs": [
+      {
+        "name": "Danger Warning Sign",
+        "meaning": "Insignia of danger warning sign",
+        "image": "assets/images/Class_A/danger_warning_sign.png"
+      },
+      {
+        "name": "T-Junction",
+        "meaning": "Road ends ahead; you must turn left or right.",
+        "image": "assets/images/Class_A/t-junction.png"
+      },
+      {
+        "name": "Road junction ahead",
+        "meaning": "Warning of road junction ahead",
+        "image": "assets/images/Class_A/road_junction_ahead _Y.png"
+      },
+      {
+        "name": "Curve ahead",
+        "meaning": "Warning of curve ahead",
+        "image": "assets/images/Class_A/curve-ahead.png"
+      },
+      {
+        "name": "Sharp Curve ahead",
+        "meaning": "Warning of sharp curve ahead",
+        "image": "assets/images/Class_A/sharp-curve-ahead.png"
+      },
+      {
+        "name": "double Curve ahead",
+        "meaning": "Warning of double curve ahead",
+        "image": "assets/images/Class_A/double-curve-ahead.png"
+      },
+      {
+        "name": "keep well to the left of the road",
+        "meaning": "Warning to emphasize that traffic must keep well to the left of the road",
+        "image": "assets/images/Class_A/well_left.png"
+      },
+      {
+        "name": "Rock falls ahead",
+        "meaning": "Warning of possible rock falls ahead",
+        "image": "assets/images/Class_A/rock-falls-ahead.png"
+      },
+      {
+        "name": "Road narrows to the right ahead",
+        "meaning": "Warning that road narrows to the right ahead",
+        "image": "assets/images/Class_A/road-narrows-right.png"
+      },
+      {
+        "name": "Road narrows centrally ahead",
+        "meaning": "Warning that road narrows centrally ahead",
+        "image": "assets/images/Class_A/road-narrows-centrally.png"
+      },
+      {
+        "name": "road narrows to the left ahead",
+        "meaning": "Warning that road narrows to the left ahead.",
+        "image": "assets/images/Class_A/road-narrows-left.png"
+      },
+      {
+        "name": "Two way traffic ahead",
+        "meaning": "Warning of two way traffic ahead",
+        "image": "assets/images/Class_A/two-way-traffic-ahead.png"
+      },
+      {
+        "name": "Narrow bridge ahead",
+        "meaning": "Warning of narrow bridge ahead",
+        "image": "assets/images/Class_A/narrow-bridge-ahead.png"
+      },
+      {
+        "name": "Narrow grid ahead",
+        "meaning": "Warning of narrow grid ahead",
+        "image": "assets/images/Class_A/narrow-grid-ahead.png"
+      },
+      {
+        "name": "Grid ahead",
+        "meaning": "Warning of grid ahead.",
+        "image": "assets/images/Class_A/grid-ahead.png"
+      },
+      {
+        "name": "side road ahead",
+        "meaning": "Warning of side road ahead",
+        "image": "assets/images/Class_A/side-road-ahead.png"
+      },
+      {
+        "name": "Cross Road Ahead",
+        "meaning": "Warning of cross road ahead",
+        "image": "assets/images/Class_A/cross-road-ahead.png"
+      },
+      {
+        "name": "steep descent ahead",
+        "meaning": "Warning of steep descent ahead.",
+        "image": "assets/images/Class_A/steep-descent-ahead.png"
+      },
+      {
+        "name": "steep ascent ahead",
+        "meaning": "Warning of steep ascent ahead.",
+        "image": "assets/images/Class_A/steep-ascent-ahead.png"
+      },
+      {
+        "name": "Dip in road ahead",
+        "meaning": "Warning of a dip in the road ahead.",
+        "image": "assets/images/Class_A/dip-in-road-ahead.png"
+      },
+      {
+        "name": "Hump in road ahead",
+        "meaning": "Warning of a hump in the road ahead.",
+        "image": "assets/images/Class_A/hump-in-road-ahead.png"
+      },
+      {
+        "name": "look out for children on the road ahead",
+        "meaning": "Warning to look out for children on the road ahead",
+        "image": "assets/images/Class_A/look-out-for-children-ahead.png"
+      },
+      {
+        "name": "look out for pedestrians on the road ahead",
+        "meaning": "Warning to look out for pedestrians on the road ahead.",
+        "image": "assets/images/Class_A/look-out-for-pedestrians-ahead.png"
+      },
+      {
+        "name": "pedestrian crossing ahead",
+        "meaning": "Warning of pedestrian crossing ahead.",
+        "image": "assets/images/Class_A/pedestrian-crossing-ahead.png"
+      },
+      {
+        "name": "Vehicles having greater width than the figure shown won't be able to pass",
+        "meaning": "Warning of obstacle ahead having (a) narrow (b) low clearance. Vehicles having greater width than the figure shown won't be able to pass",
+        "image": "assets/images/Class_A/vehicles-greater-width.png"
+      },
+      {
+        "name": "Vehicles having greater height than the figure shown won't be able to pass",
+        "meaning": "Warning of obstacle ahead having (a) narrow (b) low clearance. Vehicles having greater height than the figure shown won't be able to pass",
+        "image": "assets/images/Class_A/vehicles-greater-height.png"
+      },
+      {
+        "name": "look out for animals on road ahead",
+        "meaning": "Warning to look out for animals on road ahead.",
+        "image": "assets/images/Class_A/animals-on-road-ahead.png"
+      },
+      {
+        "name": "Animal crossing ahead",
+        "meaning": "Warning of animal crossing ahead.",
+        "image": "assets/images/Class_A/animal-crossing-ahead.png"
+      },
+      {
+        "name": "look out for elephants or other wild animals on road ahead",
+        "meaning": "Warning to look out for elephants or other wild animals on road ahead",
+        "image": "assets/images/Class_A/elephants-crossing-ahead.png"
+      },
+      {
+        "name": "antelopes or other wild animals on road ahead",
+        "meaning": "Warning to look out for antelopes or other wild animals on road ahead.",
+        "image": "assets/images/Class_A/antelopes-crossing-ahead.png"
+      },
+      {
+        "name": "slippery road ahead",
+        "meaning": "Warning of slippery road ahead.",
+        "image": "assets/images/Class_A/slippery-road-ahead.png"
+      },
+      {
+        "name": "gravel road ahead",
+        "meaning": "Warning of gravel road ahead.",
+        "image": "assets/images/Class_A/gravel-road-ahead.png"
+      },
+      {
+        "name": "traffic must slow down to follow a detour",
+        "meaning": "Warning that traffic must slow down to follow a detour",
+        "image": "assets/images/Class_A/detour-ahead.png"
+      },
+      {
+        "name": "slow down and expect to be stopped",
+        "meaning": "Warning to slow down and expect to be stopped",
+        "image": "assets/images/Class_A/slow-down-ahead.png"
+      },
+      {
+        "name": "slow down because of road workers ahead",
+        "meaning": "Warning of road workers ahead.",
+        "image": "assets/images/Class_A/road-workers-ahead.png"
+      },
+      {
+        "name": "rail/road level crossing ahead",
+        "meaning": "Warning of rail/road level crossing ahead",
+        "image": "assets/images/Class_A/rail-road-level-crossing-ahead.png"
+      },
+      {
+        "name": "physical barrier ahead",
+        "meaning": "Warning of physical barrier ahead",
+        "image": "assets/images/Class_A/physical-barrier-ahead.png"
+      },
+      {
+        "name": "stop or give way sign ahead",
+        "meaning": "Warning of stop or give way sign ahead",
+        "image": "assets/images/Class_A/stop-or-give-way-sign-ahead.png"
+      },
+      {
+        "name": "robot ahead",
+        "meaning": "Warning of robot ahead",
+        "image": "assets/images/Class_A/robot-ahead.png"
+      },
+      {
+        "name": "roundabout ahead",
+        "meaning": "Warning of roundabout ahead",
+        "image": "assets/images/Class_A/roundabout-ahead.png"
+      }
+
+
+      
+      
+    ]
+  },
+  {
+    "title": "Regulatory Signs",
+    "subtitle": "Class B",
+    "classCode": "Class B",
+    "description": "Regulatory signs indicate actions that are forbidden, compulsory, or reserved. They include prohibitory signs (circular, red border, white background), command signs (circular, blue background), and reservation signs (circular, blue background for reserved lanes).",
+    "shape": "circle-slash",
+    "shapeColor": "#DC2626",
+    "shapeFill": "#FFFFFF",
+    "imageFolder": "Class_B",
+    
+    "signs": [
+{
+    "name": "Passage prohibited for all vehicular traffic in direction of arrow",
+    "meaning": "Vehicles must not proceed in the direction indicated by the arrow.",
+    "image": "assets/images/Class_B/passage-prohibited-arrow.png"
+  },
+  {
+    "name": "Direction to be followed as indicated by the direction of the arrow",
+    "meaning": "Vehicles must follow the direction shown by the arrow.",
+    "image": "assets/images/Class_B/direction-arrow.png"
+  },
+  {
+    "name": "About turn prohibited",
+    "meaning": "Vehicles are not allowed to make a U-turn.",
+    "image": "assets/images/Class_B/about-turn-prohibited.png"
+  },
+  {
+    "name": "Turning to the left prohibited",
+    "meaning": "Vehicles are not allowed to turn left at this point.",
+    "image": "assets/images/Class_B/turn-left-prohibited.png"
+  },
+  {
+    "name": "Turning to the right prohibited",
+    "meaning": "Vehicles are not allowed to turn right at this point.",
+    "image": "assets/images/Class_B/turn-right-prohibited.png"
+  },
+  {
+    "name": "Railroad level crossing",
+    "meaning": "Warning of a railway crossing ahead.",
+    "image": "assets/images/Class_B/railroad-crossing.png"
+  },
+  {
+    "name": "Special sign in conjunction with robot to indicate turning to the right prohibited",
+    "meaning": "Indicates no right turn when used with a traffic signal.",
+    "image": "assets/images/Class_B/robot-turn-right-prohibited.png"
+  },
+  {
+    "name": "Parking prohibited in direction of arrow",
+    "meaning": "Parking is not allowed in the direction shown by the arrow.",
+    "image": "assets/images/Class_B/parking-prohibited-arrow.png"
+  },
+  {
+    "name": "Parking restricted to period shown in direction of arrow",
+    "meaning": "Parking allowed only during times shown and in the direction of the arrow.",
+    "image": "assets/images/Class_B/parking-period-arrow.png"
+  },
+  {
+    "name": "Parking restricted to period shown",
+    "meaning": "Parking is allowed only during the times displayed on the sign.",
+    "image": "assets/images/Class_B/parking-period.png"
+  },
+  {
+    "name": "Parking restricted to class of vehicle indicated only",
+    "meaning": "Parking allowed only for specified vehicle types such as taxis or buses.",
+    "image": "assets/images/Class_B/parking-class.png"
+  },
+  {
+    "name": "Stopping prohibited in direction indicated by arrow",
+    "meaning": "Stopping is not allowed in the direction indicated by the arrow.",
+    "image": "assets/images/Class_B/stopping-prohibited-arrow.png"
+  },
+  {
+    "name": "Cyclists prohibited",
+    "meaning": "Bicycles are not allowed beyond this point.",
+    "image": "assets/images/Class_B/cyclists-prohibited.png"
+  },
+  {
+    "name": "Stop at customs control point",
+    "meaning": "Vehicles must stop for customs inspection.",
+    "image": "assets/images/Class_B/stop-customs.png"
+  },
+  {
+    "name": "Overtaking prohibited for the distance indicated",
+    "meaning": "No overtaking allowed for the distance specified on the sign.",
+    "image": "assets/images/Class_B/overtaking-prohibited.png"
+  },
+  {
+    "name": "Stopping, waiting and parking prohibited during period shown",
+    "meaning": "Stopping, waiting, and parking are prohibited during the times shown.",
+    "image": "assets/images/Class_B/no-stop-wait-parking.png"
+  },
+  {
+    "name": "Parking prohibited for all vehicles other than those for which special provision exists",
+    "meaning": "Parking is prohibited except for vehicles with special authorization.",
+    "image": "assets/images/Class_B/parking-special.png"
+  },
+  {
+    "name": "Speed limit sign - same as general limit",
+    "meaning": "Indicates the speed limit is the same as the general area limit.",
+    "image": "assets/images/Class_B/speed-limit-general.png"
+  },
+  {
+    "name": "Speed limit sign - different from general limit",
+    "meaning": "Indicates a different speed limit from the general area limit.",
+    "image": "assets/images/Class_B/speed-limit-different.png"
+  },
+  {
+    "name": "Speed limit - maximum in km/h",
+    "meaning": "Maximum speed allowed in kilometers per hour.",
+    "image": "assets/images/Class_B/speed-limit.png"
+  },
+  {
+    "name": "Gross mass of single vehicle exceeded prohibited",
+    "meaning": "Vehicles exceeding the specified gross mass are not allowed.",
+    "image": "assets/images/Class_B/gross-mass-prohibited.png"
+  },
+  {
+    "name": "Vehicles exceeding width prohibited",
+    "meaning": "Vehicles with loads wider than specified are prohibited.",
+    "image": "assets/images/Class_B/width-prohibited.png"
+  },
+  {
+    "name": "Vehicles exceeding height prohibited",
+    "meaning": "Vehicles with loads taller than specified are prohibited.",
+    "image": "assets/images/Class_B/height-prohibited.png"
+  },
+  {
+    "name": "No entry for vehicular traffic",
+    "meaning": "Do not enter this road or lane.",
+    "image": "assets/images/Class_B/no-entry.png"
+  },
+  {
+    "name": "Give precedence to all approaching traffic",
+    "meaning": "Vehicles must yield to all traffic on the main road.",
+    "image": "assets/images/Class_B/give-way-all.png"
+  },
+  {
+    "name": "Parking prohibited unless loading or offloading",
+    "meaning": "Parking only allowed for loading or unloading goods.",
+    "image": "assets/images/Class_B/parking-loading.png"
+  },
+  {
+    "name": "Stopping prohibited except bus stopping for passengers",
+    "meaning": "Stopping is prohibited except for buses picking up or dropping off passengers.",
+    "image": "assets/images/Class_B/stopping-bus.png"
+  },
+  {
+    "name": "Stop line compliance",
+    "meaning": "Vehicles must stop behind the line; if none exists, stop without encroaching on other traffic.",
+    "image": "assets/images/Class_B/stop-line.png"
+  },
+  {
+    "name": "Vehicles give precedence to cross traffic",
+    "meaning": "Vehicles must yield to cross traffic before proceeding.",
+    "image": "assets/images/Class_B/give-way-cross.png"
+  },
+  {
+    "name": "Cyclists stop and give precedence",
+    "meaning": "Cyclists must stop and yield to all traffic before entering the road ahead.",
+    "image": "assets/images/Class_B/cyclists-stop-give-way.png"
+  },
+  {
+    "name": "Cyclists give precedence to cross traffic",
+    "meaning": "Cyclists must yield to cross traffic before proceeding.",
+    "image": "assets/images/Class_B/cyclists-give-way-cross.png"
+  },
+  {
+    "name": "Temporary traffic control - restriction",
+    "meaning": "Sign used to temporarily control traffic where movement restrictions are necessary.",
+    "image": "assets/images/Class_B/temp-traffic-control_GO.png"
+  },
+  {
+    "name": "Temporary traffic control - restriction",
+    "meaning": "Sign used to temporarily control traffic where movement restrictions are necessary.",
+    "image": "assets/images/Class_B/temp-traffic-control_STOP.png"
+  }
+    ]
+  },
+  {
+    "title": "Informative Signs",
+    "subtitle": "Class C",
+    "classCode": "Class C",
+    "description": "Informative signs provide directions, distances, facility locations, and tourism information. They include guidance signs (rectangular, green or blue background) and tourism signs (rectangular, brown background with white text).",
+    "shape": "rectangle",
+    "shapeColor": "#047857",
+    "shapeFill": "#047857",
+    "imageFolder": "Class_C",
+    
+    "signs": [
+      {
+    "name": "Advance direction signs",
+    "meaning": "Indicates the directions vehicles should take ahead.",
+    "image": "assets/images/Class_C/advance-direction.png"
+  },
+  {
+    "name": "Advance information signs",
+    "meaning": "Provides advance information about the road or traffic conditions.",
+    "image": "assets/images/Class_C/advance-information.png"
+  },
+  {
+    "name": "Place name",
+    "meaning": "Shows the name of a town, city, or locality.",
+    "image": "assets/images/Class_C/place-name.png"
+  },
+  {
+    "name": "Distance sign",
+    "meaning": "Indicates the distance to a destination.",
+    "image": "assets/images/Class_C/distance-sign.png"
+  },
+  {
+    "name": "Direction sign - temporary road detour",
+    "meaning": "Shows the direction of a temporary road detour.",
+    "image": "assets/images/Class_C/detour-direction.png"
+  },
+  {
+    "name": "Police control ahead",
+    "meaning": "Warning of police control; traffic should slow down and expect to stop. Erected by police only.",
+    "image": "assets/images/Class_C/police-control.png"
+  },
+  {
+    "name": "Dual carriageway ahead",
+    "meaning": "Informative sign indicating the start of a dual carriageway.",
+    "image": "assets/images/Class_C/dual-carriageway.png"
+  },
+  {
+    "name": "Direction sign",
+    "meaning": "Indicates the direction to a specific location.",
+    "image": "assets/images/Class_C/direction-sign.png"
+  },
+  {
+    "name": "Direction sign to a hospital",
+    "meaning": "Shows the direction to a hospital.",
+    "image": "assets/images/Class_C/direction-hospital.png"
+  },
+  {
+    "name": "Directions sign to first-aid facilities",
+    "meaning": "Indicates the direction to first-aid facilities.",
+    "image": "assets/images/Class_C/direction-first-aid.png"
+  },
+  {
+    "name": "De-restriction sign",
+    "meaning": "Indicates the end of a specially imposed speed limit.",
+    "image": "assets/images/Class_C/de-restriction.png"
+  },
+  {
+    "name": "Cycle track sign",
+    "meaning": "Indicates the existence of a cycle track.",
+    "image": "assets/images/Class_C/cycle-track.png"
+  },
+  {
+    "name": "No through road",
+    "meaning": "Indicates a dead-end street with no through traffic.",
+    "image": "assets/images/Class_C/no-through-road.png"
+  },
+  {
+    "name": "Taxi rank sign",
+    "meaning": "Indicates the location of a taxi rank.",
+    "image": "assets/images/Class_C/taxi-rank.png"
+  },
+  {
+    "name": "Bus stop sign",
+    "meaning": "Indicates the location of a bus stop.",
+    "image": "assets/images/Class_C/bus-stop.png"
+  },
+  {
+    "name": "Parking area sign",
+    "meaning": "Indicates the existence of a parking area.",
+    "image": "assets/images/Class_C/parking-area.png"
+  },
+  {
+    "name": "Direction sign to a parking area",
+    "meaning": "Shows the direction to a parking area.",
+    "image": "assets/images/Class_C/direction-parking.png"
+  },
+  {
+    "name": "Lay-by ahead",
+    "meaning": "Indicates a lay-by ahead for stopping or resting.",
+    "image": "assets/images/Class_C/lay-by.png"
+  },
+  {
+    "name": "Rest place ahead",
+    "meaning": "Indicates the location of a rest area ahead.",
+    "image": "assets/images/Class_C/rest-place.png"
+  },
+  {
+    "name": "One way road direction",
+    "meaning": "Indicates the direction of travel on a one-way road.",
+    "image": "assets/images/Class_C/one-way-direction.png"
+  }
+    ]
+  },
+  {
+    "title": "Traffic Light Signals",
+    "subtitle": "Class D",
+    "classCode": "Class D",
+    "description": "Traffic light signals control the movement of vehicles and pedestrians at intersections. The correct sequence is Green, Amber, Red, then Amber+Red, Green.",
+    "shape": "rectangle",
+    "shapeColor": "#374151",
+    "shapeFill": "#1F2937",
+    "imageFolder": "TRAFFIC_LIGHT",
+    "signs": [
+      {
+    "name": "Stop",
+    "meaning": "Vehicles must come to a complete stop.",
+    "image": "assets/images/Class_D/stop.png"
+  },
+  {
+    "name": "Warning of stop",
+    "meaning": "Warning to drivers that a stop sign is ahead.",
+    "image": "assets/images/Class_D/warning-stop.png"
+  },
+  {
+    "name": "Proceed with caution",
+    "meaning": "Drivers should proceed carefully.",
+    "image": "assets/images/Class_D/proceed-caution.png"
+  },
+  {
+    "name": "Traffic turning to the right may proceed if the road is clear",
+    "meaning": "Vehicles turning right may go when safe.",
+    "image": "assets/images/Class_D/right-turn-clear.png"
+  },
+  {
+    "name": "Rail/road level crossing with flashing warning lights",
+    "meaning": "Indicates a level crossing with active flashing lights.",
+    "image": "assets/images/Class_D/rail-crossing-flashing.png"
+  },
+  {
+    "name": "Example of flashing light signal",
+    "meaning": "Sign demonstrating a flashing light signal for traffic control.",
+    "image": "assets/images/Class_D/flashing-signal.png"
+  },
+  {
+    "name": "Only straight ahead traffic may proceed",
+    "meaning": "Vehicles are only allowed to move straight ahead.",
+    "image": "assets/images/Class_D/straight-only.png"
+  },
+  {
+    "name": "Traffic turning to the left may proceed if the road is clear",
+    "meaning": "Vehicles turning left may go when safe.",
+    "image": "assets/images/Class_D/left-turn-clear.png"
+  },
+  {
+    "name": "Proceed with caution (green arrow)",
+    "meaning": "Traffic may proceed as other directions have been stopped; indicated by green arrow.",
+    "image": "assets/images/Class_D/proceed-green-arrow.png"
+  },
+  {
+    "name": "Proceed with caution and give way to traffic from right",
+    "meaning": "Proceed carefully and yield to vehicles coming from the right.",
+    "image": "assets/images/Class_D/caution-yield-right.png"
+  }
+    ]
+  },
+  {
+    "title": "Carriageway Markings",
+    "subtitle": "Class E",
+    "classCode": "Class E",
+    "description": "Carriageway markings are painted on the road surface to guide, warn, and regulate traffic flow.",
+    "shape": "rectangle",
+    "shapeColor": "#7C3AED",
+    "shapeFill": "#7C3AED",
+    "imageFolder": "CARRIAGEWAY",
+    "signs": [
+      {
+    "name": "Vehicle X & Y keep left (A-B / B-A)",
+    "meaning": "Vehicle X must keep to the left of the continuous line between points A and B; Vehicle Y must keep to the left between points B and A.",
+    "image": "assets/images/Class_E/vehicle-left-ab-ba.png"
+  },
+  {
+    "name": "Vehicle X & Y keep left (A-D / B-C), may cross after D/C",
+    "meaning": "Vehicle X must keep left between A and D but may cross after D if safe; Vehicle Y keeps left between B and C but may cross after C if safe.",
+    "image": "assets/images/Class_E/vehicle-left-ad-bc-cross.png"
+  },
+  {
+    "name": "Double prohibition line",
+    "meaning": "No vehicle may at any time be driven on the right-hand side of this lane.",
+    "image": "assets/images/Class_E/double-prohibition-line.png"
+  },
+  {
+    "name": "Pedestrian crossing stripes",
+    "meaning": "Pedestrian crossing pattern at points other than road intersections; alternate black and white stripes.",
+    "image": "assets/images/Class_E/pedestrian-crossing.png"
+  },
+  {
+    "name": "Direction arrows with prohibition lines",
+    "meaning": "Arrows used with prohibition lines have a regulatory effect.",
+    "image": "assets/images/Class_E/direction-arrows-prohibition.png"
+  },
+  {
+    "name": "Edge of carriageway line",
+    "meaning": "No motor vehicle shall cross or straddle the yellow line except to overtake traffic turning right.",
+    "image": "assets/images/Class_E/edge-carriageway.png"
+  }
+    ]
+  }
+]

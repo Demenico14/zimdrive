@@ -1,0 +1,146 @@
+[
+  {
+    "title": "General Rules & Responsibilities",
+    "icon": "gavel",
+    "content": [
+      "All drivers must hold a valid Zimbabwean driving licence or recognised international permit.",
+      "Vehicles must be roadworthy and have a valid certificate of fitness.",
+      "Third-party insurance is compulsory for all motor vehicles.",
+      "Drivers must carry their licence, vehicle registration, and insurance documents at all times.",
+      "Seat belts must be worn by the driver and all passengers at all times.",
+      "Using a hand-held mobile phone while driving is prohibited.",
+      "Children under 3 years must be secured in an approved child seat.",
+      "It is an offence to drive under the influence of alcohol or drugs.",
+      "Drivers must obey all traffic signs, signals, and road markings.",
+      "Report all accidents to the nearest police station within 24 hours."
+    ]
+  },
+  {
+    "title": "Speed Limits",
+    "icon": "speed",
+    "content": [
+      "Built-up / Urban areas: 60 km/h unless otherwise posted.",
+      "Rural / Open roads: 80 km/h unless otherwise posted.",
+      "Highways / Dual carriageways: 120 km/h unless otherwise posted.",
+      "School zones: 40 km/h during school hours when signs are displayed.",
+      "Construction / Road-work zones: Speed as indicated by temporary signs, typically 40-60 km/h.",
+      "Towing another vehicle: Maximum 30 km/h.",
+      "Heavy commercial vehicles (above 3 500 kg): 80 km/h maximum on all roads.",
+      "Minibuses and light commercial vehicles: 100 km/h maximum on highways.",
+      "Speeding fines are issued on the spot and increase with severity of the offence.",
+      "Speed cameras are in operation on major highways and urban arterials."
+    ]
+  },
+  {
+    "title": "Overtaking & Passing",
+    "icon": "swap-horiz",
+    "content": [
+      "Overtake on the right only (Zimbabwe drives on the left).",
+      "Do not overtake when approaching a hill crest, curve, or intersection.",
+      "Do not overtake where the road is marked with a solid continuous centre line on your side.",
+      "Ensure the road ahead is clear for a sufficient distance before overtaking.",
+      "Signal your intention to overtake and check mirrors and blind spots.",
+      "Return to the left lane only when the overtaken vehicle is visible in your rear-view mirror.",
+      "Do not exceed the speed limit while overtaking.",
+      "Give way to vehicles already overtaking you; do not accelerate to block them.",
+      "Never overtake at or near pedestrian crossings, bridges, or level crossings.",
+      "Flash headlights or sound your horn to warn the vehicle ahead when overtaking on rural roads."
+    ]
+  },
+  {
+    "title": "Traffic Signals & Lights",
+    "icon": "traffic",
+    "content": [
+      "RED: Stop behind the stop line and wait. Do not proceed until green.",
+      "RED + AMBER: Prepare to go but do not proceed until green appears.",
+      "GREEN: Proceed if the way is clear. Give way to pedestrians and vehicles still in the intersection.",
+      "AMBER (alone): Stop unless you are so close that stopping would be dangerous.",
+      "GREEN ARROW: You may proceed in the direction of the arrow, giving way to pedestrians.",
+      "FLASHING RED: Treat as a stop sign; stop completely and proceed when safe.",
+      "FLASHING AMBER: Proceed with caution; the intersection is uncontrolled.",
+      "Traffic lights out of order: Treat the intersection as a four-way stop.",
+      "At intersections with both lights and signs, obey the traffic lights.",
+      "Pedestrian signals with countdown timers must be obeyed; do not start crossing on a flashing red hand."
+    ]
+  },
+  {
+    "title": "Pedestrian Crossings",
+    "icon": "directions-walk",
+    "content": [
+      "Always give way to pedestrians on a marked crossing.",
+      "Slow down and be prepared to stop when approaching a pedestrian crossing.",
+      "Do not overtake another vehicle that has stopped at a pedestrian crossing.",
+      "At traffic lights, give way to pedestrians crossing when you turn.",
+      "Flashing amber lights near crossings mean slow down and give way to pedestrians.",
+      "Do not park or stop within 10 metres of a pedestrian crossing.",
+      "Sound your horn only to warn pedestrians of danger, not to rush them.",
+      "At school crossings, obey scholar patrol signs and crossing guards.",
+      "Zebra crossings: Pedestrians have right of way once they step onto the crossing.",
+      "Be especially vigilant in areas near hospitals, shopping centres, and bus stops."
+    ]
+  },
+  {
+    "title": "Lane Discipline",
+    "icon": "compare-arrows",
+    "content": [
+      "Drive in the left lane unless overtaking or turning right.",
+      "On a multi-lane road, use the left lane for normal driving and the right lane for overtaking.",
+      "Do not weave between lanes or change lanes without signalling.",
+      "Use slip roads and acceleration lanes to merge safely onto highways.",
+      "Do not straddle lane markings; stay entirely within your lane.",
+      "When approaching a roundabout, choose your lane based on your exit.",
+      "Bus lanes: Do not drive in marked bus lanes during restricted hours.",
+      "On three-lane roads, the middle lane is for overtaking only; return to the left lane promptly.",
+      "Use turning lanes where provided; do not cut across lanes at intersections.",
+      "In heavy traffic, maintain your lane position and proceed in turn."
+    ]
+  },
+  {
+    "title": "Driving in Adverse Conditions",
+    "icon": "cloud",
+    "content": [
+      "Rain: Reduce speed, increase following distance, and use dipped headlights.",
+      "Fog: Use fog lights (if fitted) or dipped headlights. Drive slowly and stay alert.",
+      "Night driving: Use headlights between sunset and sunrise. Dip lights for oncoming traffic.",
+      "Flooded roads: Do not attempt to cross if the water depth is unknown. If you must cross, drive slowly in low gear.",
+      "Gravel roads: Reduce speed, keep a safe following distance to avoid stone damage.",
+      "Dust: Slow down when visibility is reduced and use dipped headlights.",
+      "Strong winds: Hold the steering wheel firmly; be cautious around large vehicles.",
+      "Sun glare: Use sun visors and keep your windscreen clean to reduce glare.",
+      "If conditions are dangerously poor, pull off the road safely and wait until they improve.",
+      "Always check weather forecasts before long journeys."
+    ]
+  },
+  {
+    "title": "Alcohol & Drug Laws",
+    "icon": "local-bar",
+    "content": [
+      "The legal blood alcohol limit in Zimbabwe is 0.08 g per 100 ml of blood (80 mg%).",
+      "Driving under the influence is a criminal offence carrying heavy penalties.",
+      "Penalties include fines, licence suspension, imprisonment, or a combination.",
+      "Police may conduct random roadside sobriety checks and breathalyser tests.",
+      "Refusing a breathalyser test is treated the same as a positive result.",
+      "Prescription and over-the-counter drugs that impair driving must not be taken before driving.",
+      "It is an offence to be in charge of a vehicle while intoxicated, even if not driving.",
+      "Repeat offenders face increased penalties and longer licence suspensions.",
+      "If you plan to drink, arrange alternative transport; designate a sober driver.",
+      "Alcohol-related accidents that cause injury or death carry sentences of up to 10 years."
+    ]
+  },
+  {
+    "title": "Licensing Requirements",
+    "icon": "badge",
+    "content": [
+      "Minimum age for a learner's licence (Class 4 - light motor vehicle): 16 years.",
+      "Minimum age for a full driving licence (Class 4): 18 years.",
+      "A learner's permit is valid for 12 months from the date of issue.",
+      "Learner drivers must be accompanied by a licenced driver at all times.",
+      "Learner drivers must display \"L\" plates on the front and rear of the vehicle.",
+      "The driving test includes a road signs test (oral), yard test, and road test.",
+      "A provisional licence is issued after passing the driving test, valid for 2 years.",
+      "Licences are renewable at the Central Vehicle Registry (CVR) or designated offices.",
+      "Foreign licences are valid for 90 days; thereafter you must obtain a Zimbabwean licence.",
+      "Class 1 (motorcycle), Class 2 (heavy vehicle), and Class 3 (bus) licences have additional requirements."
+    ]
+  }
+]

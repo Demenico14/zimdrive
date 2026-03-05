@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1077623196381",
+    "project_id": "zimdrive-b1874",
+    "storage_bucket": "zimdrive-b1874.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1077623196381:android:590d149f530e4e5a89a934",
+        "android_client_info": {
+          "package_name": "com.zimdrive1.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1077623196381-da9ejkcrp55qu3obl22e34hn6sdoonte.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTDpnkQtuN3duC5LpfONIWfIOJ1W4fDn4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1077623196381-da9ejkcrp55qu3obl22e34hn6sdoonte.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1077623196381-i798knq0puf9679tngvggee0lmjveqo7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.zimdrive1.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
