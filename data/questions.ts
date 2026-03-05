@@ -11,8 +11,8 @@ export interface Question {
   category: Category;
   question: string;
   image?: string;
-  options: { A: string; B: string; C: string; D: string };
-  correctAnswer: 'A' | 'B' | 'C' | 'D';
+  options: { A: string; B: string; C: string; };
+  correctAnswer: 'A' | 'B' | 'C' ;
   explanation: string;
   difficulty: 'easy' | 'medium' | 'hard';
   tags: string[];
@@ -71,139 +71,147 @@ export const QUESTIONS: Question[] = [
       A: 'Hospital ahead',
       B: 'End of speed restriction',
       C: 'Broken down Vehicles ahead',
-      D: 'Speed limit ends',
+      
     },
     correctAnswer: 'B',
     explanation:
-      'A red circle with a white horizontal bar is the universal "No Entry" sign. It means vehicles must not enter the road from that direction.',
+      'The previously imposed driving restrictions (such as vehicle class, speed, or license limitations) have ended, allowing motorists to resume normal driving conditions beyond that point.',
     difficulty: 'easy',
     tags: ['regulatory', 'prohibition'],
   },
   {
     id: 2,
     category: 'road-signs',
-    question: 'A triangular sign with a red border is a:',
+    question: 'When approaching this sign, I should: ',
+    image: 'assets/images/Class_A/steep-descent-ahead.png',
     options: {
-      A: 'Regulatory sign',
-      B: 'Warning sign',
-      C: 'Information sign',
-      D: 'Direction sign',
+      A: 'Disengage Gears',
+      B: 'Engage a lower gear',
+      C: 'Apply Hand Break',
+     
     },
     correctAnswer: 'B',
     explanation:
-      'Triangular signs with red borders are warning signs. They alert drivers to hazards ahead such as sharp bends, intersections, or animals crossing.',
+      'I should slow down, select a lower gear, and maintain controlled braking to safely descend the hill.',
     difficulty: 'easy',
     tags: ['warning', 'shape'],
   },
   {
     id: 3,
     category: 'road-signs',
-    question: 'What does a circular blue sign with a white arrow pointing up mean?',
+    question: 'The sign indicates I am: ',
+    image: 'assets/images/Class_B/about-turn-prohibited.png',
     options: {
-      A: 'One-way street ahead',
-      B: 'Proceed straight only',
-      C: 'No U-turn',
-      D: 'Highway ahead',
+      A: 'Permitted to make a U Turn',
+      B: 'Prohibited from making a U Turn',
+      C: 'Prohibited from turning right',
+      
     },
     correctAnswer: 'B',
     explanation:
-      'A circular blue sign with a white upward arrow is a mandatory sign meaning you must proceed straight ahead. Blue circular signs give positive instructions.',
+      'This sign indicates that making a U-turn at this location is prohibited. Drivers must continue straight or turn left if allowed, but cannot reverse direction here.',
     difficulty: 'easy',
     tags: ['mandatory', 'direction'],
   },
   {
     id: 4,
     category: 'road-signs',
-    question: 'A "STOP" sign requires you to:',
+    question: 'This sign indicates: ',
+    image: 'assets/images/Class_A/vehicles-greater-width.png',
     options: {
-      A: 'Slow down and proceed if safe',
-      B: 'Come to a complete stop and yield to traffic',
+      A: 'Width Restriction Ahead',
+      B: 'Height Restriction Ahead',
       C: 'Flash your lights and proceed',
-      D: 'Stop only if there is oncoming traffic',
+      
     },
-    correctAnswer: 'B',
+    correctAnswer: 'A',
     explanation:
-      'A STOP sign is an octagonal red sign that requires you to come to a complete stop. You must yield to all traffic before proceeding.',
+      'This sign indicates a width restriction ahead, warning drivers that vehicles wider than the specified limit cannot pass',
     difficulty: 'easy',
     tags: ['regulatory', 'stop'],
   },
   {
     id: 5,
     category: 'road-signs',
-    question: 'What does a yellow diamond-shaped sign indicate?',
+    question: 'At this sign I should: ',
+    image: 'assets/images/Class_B/stop-line.png',
     options: {
-      A: 'You have priority on the road',
-      B: 'Road works ahead',
-      C: 'No entry ahead',
-      D: 'Hospital nearby',
+      A: 'Stop, and only procceed when the road is clear on both sides',
+      B: 'Stop, and only procceed when the road is clear on the left',
+      C: 'Stop, and only procceed when the road is clear on the right',
+      
     },
     correctAnswer: 'A',
     explanation:
-      'A yellow diamond-shaped sign indicates that you are on a priority road. Vehicles on side roads must yield to you.',
+      'You must come to a complete stop at the line and only proceed when the road is clear in both directions.',
     difficulty: 'medium',
     tags: ['priority', 'information'],
   },
   {
     id: 6,
     category: 'road-signs',
-    question: 'A sign showing two arrows curving in opposite directions warns of:',
+    question: 'This sign indicates that I :',
+    image: 'assets/images/Class_B/parking.png',
     options: {
-      A: 'A roundabout ahead',
-      B: 'A dual carriageway ends',
-      C: 'Double bends ahead',
-      D: 'Two-way traffic ahead',
+      A: 'May not park my vehicle ',
+      B: 'May park my vehicle',
+      C: 'Expect Lay-by ahead',
+      
     },
-    correctAnswer: 'C',
+    correctAnswer: 'A',
     explanation:
-      'Two arrows curving in opposite directions on a warning sign indicate double bends ahead, the first bend being in the direction of the first arrow.',
+      'It indicates parking is not allowed at that location.',
     difficulty: 'medium',
     tags: ['warning', 'bends'],
   },
   {
     id: 7,
     category: 'road-signs',
-    question: 'What does a red circle with a diagonal red line over a "P" mean?',
+    question: 'This sign indicates? ',
+    image: 'assets/images/Class_B/railroad-crossing.png',
     options: {
-      A: 'Parking allowed for 30 minutes',
-      B: 'No parking at any time',
-      C: 'Paid parking zone',
-      D: 'Parking for permit holders only',
+      A: 'Railway Station',
+      B: 'Rail-road level crossing',
+      C: 'An Intersection ',
+      
     },
     correctAnswer: 'B',
     explanation:
-      'A red circle with a diagonal line over a "P" is a prohibition sign meaning no parking is allowed at any time on that stretch of road.',
+      'It indicates a rail-road level crossing where a railway line crosses the road.',
     difficulty: 'easy',
     tags: ['regulatory', 'parking'],
   },
   {
     id: 8,
     category: 'road-signs',
-    question: 'A circular sign with a red border and number "60" means:',
+    question: 'This sign indicates? ',
+    image: 'assets/images/Class_A/animals-on-road-ahead.png',
     options: {
-      A: 'Minimum speed is 60 km/h',
-      B: 'Maximum speed is 60 km/h',
-      C: 'Speed limit ends at 60 km/h',
-      D: 'Recommended speed is 60 km/h',
+      A: 'Danger of stray animals',
+      B: 'Danger of wild Animals',
+      C: 'Danger of farm Animals',
+      
     },
-    correctAnswer: 'B',
+    correctAnswer: 'C',
     explanation:
-      'A circular sign with a red border and a number indicates the maximum speed limit. You must not exceed 60 km/h in this zone.',
+      'It warns drivers that farm animals may cross the road ahead, so extra caution is required.',
     difficulty: 'easy',
     tags: ['regulatory', 'speed'],
   },
   {
     id: 9,
     category: 'road-signs',
-    question: 'What does a brown rectangular sign typically indicate?',
+    question: 'This sign indicates? ',
+    image: 'assets/images/Class_A/Ridge.png',
     options: {
-      A: 'Road work information',
-      B: 'Tourist attraction or point of interest',
-      C: 'Hospital or medical facility',
-      D: 'Government building ahead',
+      A: 'Hump Ahead',
+      B: 'Dip of Ridge Ahead',
+      C: 'Mountains Ahead',
+      
     },
     correctAnswer: 'B',
     explanation:
-      'Brown rectangular signs are used to indicate tourist attractions, scenic areas, or points of interest such as game reserves or historical sites.',
+      'This sign indicates a dip or ridge in the road ahead, warning drivers to slow down and be prepared for a sudden change in the road surface.',
     difficulty: 'medium',
     tags: ['information', 'tourism'],
   },
@@ -211,16 +219,17 @@ export const QUESTIONS: Question[] = [
     id: 10,
     category: 'road-signs',
     question:
-      'A sign with a red circle and a picture of two cars side by side (one overtaking the other) means:',
+      'This sign means that:',
+    image: 'assets/images/Class_A/No_Traffic_Lights.png',
     options: {
-      A: 'Overtaking lane ahead',
-      B: 'Two lanes merge ahead',
-      C: 'No overtaking',
-      D: 'Dual carriageway begins',
+      A: 'Rail road level crossing ahead',
+      B: 'Traffic lights and rail road crossing ahead',
+      C: 'Traffic lights out of order',
+      
     },
     correctAnswer: 'C',
     explanation:
-      'This prohibition sign means no overtaking. You must not pass the vehicle in front of you until the restriction ends.',
+      'It indicates that the traffic lights ahead are out of order, so drivers must proceed with caution.',
     difficulty: 'easy',
     tags: ['regulatory', 'prohibition'],
   },
@@ -234,7 +243,7 @@ export const QUESTIONS: Question[] = [
       A: 'Right side of the road',
       B: 'Left side of the road',
       C: 'Centre of the road',
-      D: 'Either side depending on the road',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -250,7 +259,7 @@ export const QUESTIONS: Question[] = [
       A: '40 km/h',
       B: '60 km/h',
       C: '80 km/h',
-      D: '100 km/h',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -266,7 +275,7 @@ export const QUESTIONS: Question[] = [
       A: '80 km/h',
       B: '100 km/h',
       C: '120 km/h',
-      D: '140 km/h',
+     
     },
     correctAnswer: 'C',
     explanation:
@@ -282,7 +291,7 @@ export const QUESTIONS: Question[] = [
       A: 'Coming from the left',
       B: 'Coming from the right',
       C: 'Already in the roundabout from the right',
-      D: 'Coming from any direction',
+      
     },
     correctAnswer: 'C',
     explanation:
@@ -299,7 +308,7 @@ export const QUESTIONS: Question[] = [
       A: 'One car length',
       B: 'Two seconds gap',
       C: 'Three car lengths',
-      D: 'Five seconds gap',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -315,7 +324,7 @@ export const QUESTIONS: Question[] = [
       A: 'Speed up to get out of the way',
       B: 'Stop immediately wherever you are',
       C: 'Pull over to the left and stop if safe to do so',
-      D: 'Continue driving normally',
+      
     },
     correctAnswer: 'C',
     explanation:
@@ -331,7 +340,7 @@ export const QUESTIONS: Question[] = [
       A: '0.00 mg/100ml',
       B: '0.05 mg/100ml',
       C: '0.08 mg/100ml (80mg per 100ml of blood)',
-      D: '0.10 mg/100ml',
+      
     },
     correctAnswer: 'C',
     explanation:
@@ -347,7 +356,7 @@ export const QUESTIONS: Question[] = [
       A: 'When overtaking a slow vehicle',
       B: 'When the road is clear',
       C: 'Never, unless directed by a traffic officer or to avoid an obstruction',
-      D: 'Only during daylight hours',
+      
     },
     correctAnswer: 'C',
     explanation:
@@ -363,7 +372,7 @@ export const QUESTIONS: Question[] = [
       A: 'Sunrise to sunset',
       B: 'Sunset to sunrise or when visibility is less than 100m',
       C: 'Only when it is completely dark',
-      D: 'Only on highways',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -379,7 +388,7 @@ export const QUESTIONS: Question[] = [
       A: 'Any licensed driver',
       B: 'A driver with a valid full licence for that class of vehicle',
       C: 'A driving instructor only',
-      D: 'No accompaniment is required',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -397,7 +406,7 @@ export const QUESTIONS: Question[] = [
       A: 'Open the bonnet immediately',
       B: 'Move the vehicle off the road and place a warning triangle',
       C: 'Wave at other traffic for help',
-      D: 'Start repairing the vehicle immediately',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -413,7 +422,7 @@ export const QUESTIONS: Question[] = [
       A: 'Avoid a fine',
       B: 'Keep you in your seat during a collision and reduce injury',
       C: 'Prevent you from falling asleep',
-      D: 'Help you steer better',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -429,7 +438,7 @@ export const QUESTIONS: Question[] = [
       A: 'Drive at normal speed with hazard lights on',
       B: 'Reduce speed, increase following distance, and use dipped headlights',
       C: 'Drive on the shoulder for better grip',
-      D: 'Use high beam lights for better visibility',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -445,7 +454,7 @@ export const QUESTIONS: Question[] = [
       A: 'Driving through a flooded road',
       B: 'When tyres lose contact with the road due to a layer of water',
       C: 'Skidding on a muddy road',
-      D: 'Driving too close to the car ahead in rain',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -461,7 +470,7 @@ export const QUESTIONS: Question[] = [
       A: 'High beam (bright) headlights',
       B: 'Dipped (low beam) headlights',
       C: 'Parking lights only',
-      D: 'No lights at all',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -477,7 +486,7 @@ export const QUESTIONS: Question[] = [
       A: 'Brake hard immediately',
       B: 'Keep a firm grip on the steering, ease off the accelerator, and brake gently',
       C: 'Turn off the engine immediately',
-      D: 'Accelerate to regain control',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -493,7 +502,7 @@ export const QUESTIONS: Question[] = [
       A: '0.5 mm',
       B: '1.0 mm',
       C: '1.6 mm',
-      D: '2.0 mm',
+      
     },
     correctAnswer: 'C',
     explanation:
@@ -509,7 +518,7 @@ export const QUESTIONS: Question[] = [
       A: 'The front seat with a seatbelt',
       B: 'An approved child restraint in the rear seat',
       C: 'On an adults lap in the back seat',
-      D: 'Anywhere as long as windows are closed',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -525,7 +534,7 @@ export const QUESTIONS: Question[] = [
       A: 'Driving aggressively to protect your position',
       B: 'Anticipating hazards and driving to prevent accidents regardless of others actions',
       C: 'Driving very slowly at all times',
-      D: 'Only driving during the day',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -541,7 +550,7 @@ export const QUESTIONS: Question[] = [
       A: 'Open the windows to let the smoke out',
       B: 'Pull over, turn off the engine, evacuate, and call emergency services',
       C: 'Drive to the nearest fire station',
-      D: 'Pour water on the engine immediately',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -559,7 +568,7 @@ export const QUESTIONS: Question[] = [
       A: 'Automatic vehicles only',
       B: 'Manual vehicles only',
       C: 'All vehicles',
-      D: 'Electric vehicles only',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -575,7 +584,7 @@ export const QUESTIONS: Question[] = [
       A: 'Brake, Clutch, Accelerator',
       B: 'Clutch, Brake, Accelerator',
       C: 'Accelerator, Brake, Clutch',
-      D: 'Clutch, Accelerator, Brake',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -591,7 +600,7 @@ export const QUESTIONS: Question[] = [
       A: 'Low fuel',
       B: 'Engine overheating',
       C: 'Charging system malfunction (alternator/battery)',
-      D: 'Brake failure',
+      
     },
     correctAnswer: 'C',
     explanation:
@@ -607,7 +616,7 @@ export const QUESTIONS: Question[] = [
       A: 'Only when parking on a hill',
       B: 'Every time you park the vehicle',
       C: 'Only in manual vehicles',
-      D: 'Only in emergencies',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -623,7 +632,7 @@ export const QUESTIONS: Question[] = [
       A: 'Outside air temperature',
       B: 'Engine coolant temperature',
       C: 'Oil temperature',
-      D: 'Cabin temperature',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -639,7 +648,7 @@ export const QUESTIONS: Question[] = [
       A: 'To check your appearance',
       B: 'To see traffic behind and beside your vehicle',
       C: 'To see the road ahead',
-      D: 'To signal other drivers',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -655,7 +664,7 @@ export const QUESTIONS: Question[] = [
       A: 'Only before reversing',
       B: 'Before signalling, changing lanes, turning, slowing, or stopping',
       C: 'Only at intersections',
-      D: 'Every 10 minutes',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -671,7 +680,7 @@ export const QUESTIONS: Question[] = [
       A: 'The air conditioning is on',
       B: 'A malfunction in the Anti-lock Braking System',
       C: 'The airbag system is active',
-      D: 'Low tyre pressure',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -687,7 +696,7 @@ export const QUESTIONS: Question[] = [
       A: 'Time for an oil change',
       B: 'Low engine oil pressure - stop driving immediately',
       C: 'The oil filter needs replacing',
-      D: 'The engine is cold',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -703,7 +712,7 @@ export const QUESTIONS: Question[] = [
       A: 'A stalk on the left side of the steering column',
       B: 'A button on the dashboard',
       C: 'The horn',
-      D: 'A foot pedal',
+      
     },
     correctAnswer: 'A',
     explanation:
@@ -721,7 +730,7 @@ export const QUESTIONS: Question[] = [
       A: 'Speed up to get through first',
       B: 'Yield to traffic approaching from the right',
       C: 'Always stop completely',
-      D: 'Hoot to warn other drivers',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -737,7 +746,7 @@ export const QUESTIONS: Question[] = [
       A: 'Stop and wait for green',
       B: 'Proceed with caution, yielding to pedestrians and other traffic',
       C: 'Speed up before it turns red',
-      D: 'The traffic light is broken, ignore it',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -753,7 +762,7 @@ export const QUESTIONS: Question[] = [
       A: 'Turn immediately when the light turns green',
       B: 'Yield to oncoming traffic and pedestrians before turning',
       C: 'Wait for the light to turn red, then turn',
-      D: 'Hoot to alert oncoming traffic',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -769,7 +778,7 @@ export const QUESTIONS: Question[] = [
       A: 'The largest vehicle',
       B: 'The vehicle that arrived first',
       C: 'The vehicle on the right',
-      D: 'Whoever hoots first',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -785,7 +794,7 @@ export const QUESTIONS: Question[] = [
       A: 'Turn right into the roundabout',
       B: 'Turn left into the roundabout (clockwise direction)',
       C: 'Stop in the middle and choose a lane',
-      D: 'Enter from any direction',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -801,7 +810,7 @@ export const QUESTIONS: Question[] = [
       A: 'You may proceed only in the direction of the arrow',
       B: 'You may proceed in any direction',
       C: 'Caution, the light is about to change',
-      D: 'Pedestrians are crossing in that direction',
+      
     },
     correctAnswer: 'A',
     explanation:
@@ -817,7 +826,7 @@ export const QUESTIONS: Question[] = [
       A: 'Only when other cars are present',
       B: 'Always, well before you turn or change lanes',
       C: 'Only at night',
-      D: 'Only when a traffic officer is present',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -833,7 +842,7 @@ export const QUESTIONS: Question[] = [
       A: 'You must stop completely',
       B: 'Slow down, and give way to traffic on the road you are entering',
       C: 'You have right of way',
-      D: 'Speed limit is reduced',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -850,7 +859,7 @@ export const QUESTIONS: Question[] = [
       A: 'Quickly change lanes at the last moment',
       B: 'Continue in your lane and find an alternative route',
       C: 'Stop and reverse into the correct lane',
-      D: 'Cut across other lanes when the light turns green',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -867,7 +876,7 @@ export const QUESTIONS: Question[] = [
       A: 'A green light for all',
       B: 'A four-way stop',
       C: 'An uncontrolled intersection where you may proceed freely',
-      D: 'Closed - find an alternative route',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -885,9 +894,9 @@ export const QUESTIONS: Question[] = [
       A: 'At least 1 metre',
       B: 'At least 1.5 metres',
       C: 'At least 3 metres',
-      D: 'At least 5 metres',
+      
     },
-    correctAnswer: 'D',
+    correctAnswer: 'C',
     explanation:
       'You must park at least 5 metres away from a fire hydrant to ensure emergency vehicles can access it.',
     difficulty: 'medium',
@@ -901,7 +910,7 @@ export const QUESTIONS: Question[] = [
       A: 'Away from the kerb (towards the road)',
       B: 'Towards the kerb',
       C: 'Straight ahead',
-      D: 'It does not matter',
+      
     },
     correctAnswer: 'A',
     explanation:
@@ -917,7 +926,7 @@ export const QUESTIONS: Question[] = [
       A: '3 metres',
       B: '5 metres',
       C: '6 metres',
-      D: '10 metres',
+      
     },
     correctAnswer: 'C',
     explanation:
@@ -933,7 +942,7 @@ export const QUESTIONS: Question[] = [
       A: 'Parking allowed for 30 minutes',
       B: 'Loading zone',
       C: 'No stopping or parking at any time',
-      D: 'Parking for residents only',
+      
     },
     correctAnswer: 'C',
     explanation:
@@ -949,7 +958,7 @@ export const QUESTIONS: Question[] = [
       A: '150 mm from the kerb',
       B: '300 mm from the kerb',
       C: '450 mm (approximately 45 cm) from the kerb',
-      D: '600 mm from the kerb',
+      
     },
     correctAnswer: 'C',
     explanation:
@@ -965,7 +974,7 @@ export const QUESTIONS: Question[] = [
       A: 'Away from the kerb',
       B: 'Towards the kerb',
       C: 'Straight ahead',
-      D: 'Fully to the right',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -981,7 +990,7 @@ export const QUESTIONS: Question[] = [
       A: 'Allowed if there is no other space',
       B: 'Allowed on weekends',
       C: 'Not allowed unless a sign specifically permits it',
-      D: 'Allowed if you leave space for pedestrians',
+      
     },
     correctAnswer: 'C',
     explanation:
@@ -997,7 +1006,7 @@ export const QUESTIONS: Question[] = [
       A: 'Open it quickly to avoid traffic',
       B: 'Check mirrors and look behind for cyclists, pedestrians, or vehicles',
       C: 'Hoot to alert others',
-      D: 'Flash your hazard lights',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -1013,7 +1022,7 @@ export const QUESTIONS: Question[] = [
       A: 'Reverse out quickly',
       B: 'Signal, check mirrors and blind spots, then proceed when safe',
       C: 'Hoot before reversing',
-      D: 'Wait for all traffic to clear completely',
+      
     },
     correctAnswer: 'B',
     explanation:
@@ -1029,7 +1038,7 @@ export const QUESTIONS: Question[] = [
       A: 'On a bridge or within a tunnel',
       B: 'On a quiet residential street',
       C: 'In a designated parking bay',
-      D: 'Outside your own house',
+      
     },
     correctAnswer: 'A',
     explanation:

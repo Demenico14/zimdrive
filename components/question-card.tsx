@@ -15,7 +15,7 @@ interface QuestionCardProps {
   showExplanation?: boolean;
 }
 
-const OPTION_LABELS = ['A', 'B', 'C', 'D'] as const;
+const OPTION_LABELS = ['A', 'B', 'C'] as const;
 
 export function QuestionCard({
   question,
