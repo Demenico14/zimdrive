@@ -1,5 +1,5 @@
 import { useLocalSearchParams, useRouter } from 'expo-router';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
@@ -7,13 +7,14 @@ import { useFocusEffect } from '@react-navigation/native';
 import { useColorScheme } from '@/hooks/use-color-scheme';
 import { Colors, BorderRadius } from '@/constants/theme';
 import { CATEGORY_META, getQuestionsByCategory, type Category } from '@/data/questions';
-import { LevelPath } from '@/components/level-path';
+import { DifficultyPath } from '@/components/difficulty-path';
 import { ConfettiCelebration } from '@/components/confetti-celebration';
 import { 
   getLevelProgress, 
   type Level, 
   type CategoryLevelProgress,
   LEVEL_CONFIG,
+  DIFFICULTY_CONFIG,
 } from '@/lib/levels';
 
 export default function CategoryLevelsScreen() {
@@ -71,6 +72,11 @@ export default function CategoryLevelsScreen() {
   const completedCount = progress?.completedLevels.length ?? 0;
   const totalLevels = LEVEL_CONFIG.length;
   const progressPercent = (completedCount / totalLevels) * 100;
+  
+  // Calculate section completions
+  const easySectionComplete = progress?.sections.find(s => s.difficulty === 'easy')?.completed ?? false;
+  const mediumSectionComplete = progress?.sections.find(s => s.difficulty === 'medium')?.completed ?? false;
+  const hardSectionComplete = progress?.sections.find(s => s.difficulty === 'hard')?.completed ?? false;
 
   if (!meta || !progress) {
     return (
@@ -88,7 +94,7 @@ export default function CategoryLevelsScreen() {
           <MaterialIcons name="arrow-back" size={24} color="#FFFFFF" />
         </Pressable>
         <View style={styles.headerCenter}>
-          <Text style={styles.headerSubtitle}>LEVELS</Text>
+          <Text style={styles.headerSubtitle}>LEARNING PATH</Text>
           <Text style={styles.headerTitle}>{meta.label}</Text>
         </View>
         <View style={styles.headerRight}>
@@ -109,13 +115,15 @@ export default function CategoryLevelsScreen() {
           </View>
           <View style={styles.progressTextContainer}>
             <Text style={[styles.progressTitle, { color: colors.text }]}>
-              {completedCount === totalLevels ? 'All Levels Complete!' : `Level ${completedCount + 1} of ${totalLevels}`}
+              {completedCount === totalLevels ? 'Category Mastered!' : `${completedCount} of ${totalLevels} Levels Complete`}
             </Text>
             <Text style={[styles.progressSubtitle, { color: colors.textSecondary }]}>
-              {questions.length} questions available
+              {questions.length} questions across all difficulties
             </Text>
           </View>
         </View>
+        
+        {/* Overall progress bar */}
         <View style={[styles.progressBarBg, { backgroundColor: colors.border }]}>
           <View 
             style={[
@@ -127,24 +135,68 @@ export default function CategoryLevelsScreen() {
             ]} 
           />
         </View>
-        <View style={styles.progressStars}>
-          {Array.from({ length: totalLevels }).map((_, i) => (
-            <MaterialIcons
-              key={i}
-              name={i < completedCount ? 'star' : 'star-border'}
-              size={20}
-              color={i < completedCount ? meta.color : colors.border}
+        
+        {/* Difficulty tier indicators */}
+        <View style={styles.tierIndicators}>
+          <View style={styles.tierItem}>
+            <View 
+              style={[
+                styles.tierDot, 
+                { backgroundColor: easySectionComplete ? DIFFICULTY_CONFIG.easy.color : colors.border }
+              ]} 
             />
-          ))}
+            <Text 
+              style={[
+                styles.tierLabel, 
+                { color: easySectionComplete ? DIFFICULTY_CONFIG.easy.color : colors.textSecondary }
+              ]}
+            >
+              Easy
+            </Text>
+          </View>
+          <View style={[styles.tierConnector, { backgroundColor: easySectionComplete ? DIFFICULTY_CONFIG.easy.color : colors.border }]} />
+          <View style={styles.tierItem}>
+            <View 
+              style={[
+                styles.tierDot, 
+                { backgroundColor: mediumSectionComplete ? DIFFICULTY_CONFIG.medium.color : colors.border }
+              ]} 
+            />
+            <Text 
+              style={[
+                styles.tierLabel, 
+                { color: mediumSectionComplete ? DIFFICULTY_CONFIG.medium.color : colors.textSecondary }
+              ]}
+            >
+              Medium
+            </Text>
+          </View>
+          <View style={[styles.tierConnector, { backgroundColor: mediumSectionComplete ? DIFFICULTY_CONFIG.medium.color : colors.border }]} />
+          <View style={styles.tierItem}>
+            <View 
+              style={[
+                styles.tierDot, 
+                { backgroundColor: hardSectionComplete ? DIFFICULTY_CONFIG.hard.color : colors.border }
+              ]} 
+            />
+            <Text 
+              style={[
+                styles.tierLabel, 
+                { color: hardSectionComplete ? DIFFICULTY_CONFIG.hard.color : colors.textSecondary }
+              ]}
+            >
+              Hard
+            </Text>
+          </View>
         </View>
       </View>
 
-      {/* Level path */}
+      {/* Difficulty-based level path */}
       <ScrollView 
         contentContainerStyle={styles.scrollContent}
         showsVerticalScrollIndicator={false}
       >
-        <LevelPath
+        <DifficultyPath
           progress={progress}
           categoryColor={meta.color}
           onSelectLevel={handleSelectLevel}
@@ -265,10 +317,30 @@ const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 4,
   },
-  progressStars: {
+  tierIndicators: {
     flexDirection: 'row',
+    alignItems: 'center',
     justifyContent: 'center',
-    gap: 8,
+    marginTop: 4,
+  },
+  tierItem: {
+    alignItems: 'center',
+    gap: 4,
+  },
+  tierDot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+  },
+  tierLabel: {
+    fontSize: 10,
+    fontWeight: '600',
+    textTransform: 'uppercase',
+  },
+  tierConnector: {
+    width: 32,
+    height: 2,
+    marginHorizontal: 8,
   },
   scrollContent: {
     paddingHorizontal: 16,

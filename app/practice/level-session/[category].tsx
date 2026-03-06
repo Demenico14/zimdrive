@@ -17,6 +17,8 @@ import {
   shuffleQuestions,
   type Level,
   LEVEL_CONFIG,
+  DIFFICULTY_CONFIG,
+  type DifficultyTier,
 } from '@/lib/levels';
 
 export default function LevelSessionScreen() {
@@ -36,6 +38,7 @@ export default function LevelSessionScreen() {
   const levelIdNum = parseInt(levelId, 10);
   const levelConfig = LEVEL_CONFIG.find(l => l.id === levelIdNum);
   const isReplay = replay === 'true';
+  const difficultyConfig = levelConfig ? DIFFICULTY_CONFIG[levelConfig.difficulty as DifficultyTier] : null;
 
   const [questions, setQuestions] = useState<Question[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -167,6 +170,11 @@ export default function LevelSessionScreen() {
   const progressPercent = ((currentIndex + (answered ? 1 : 0)) / questions.length) * 100;
   const isLast = currentIndex === questions.length - 1;
   const isLastLevel = levelIdNum === LEVEL_CONFIG.length;
+  
+  // Check if this is the last level in the current tier
+  const currentTierLevels = LEVEL_CONFIG.filter(l => l.difficulty === levelConfig?.difficulty);
+  const isLastInTier = levelConfig?.tier === currentTierLevels.length;
+  const tierName = difficultyConfig?.name || '';
 
   return (
     <View style={[styles.container, { backgroundColor: colors.background }]}>
@@ -184,7 +192,7 @@ export default function LevelSessionScreen() {
                 styles.progressFill, 
                 { 
                   width: `${progressPercent}%`,
-                  backgroundColor: meta.color,
+                  backgroundColor: difficultyConfig?.color || meta.color,
                 }
               ]} 
             />
@@ -202,11 +210,20 @@ export default function LevelSessionScreen() {
 
       {/* Level indicator */}
       <View style={styles.levelIndicator}>
-        <View style={[styles.levelBadge, { backgroundColor: meta.color + '20' }]}>
-          <MaterialIcons name={levelConfig.icon as any} size={16} color={meta.color} />
-          <Text style={[styles.levelText, { color: meta.color }]}>
-            Level {levelIdNum}: {levelConfig.name}
-          </Text>
+        <View style={styles.levelBadgeRow}>
+          {/* Difficulty badge */}
+          {difficultyConfig && (
+            <View style={[styles.difficultyBadge, { backgroundColor: difficultyConfig.color }]}>
+              <MaterialIcons name={difficultyConfig.icon as any} size={12} color="#FFFFFF" />
+              <Text style={styles.difficultyText}>{difficultyConfig.name}</Text>
+            </View>
+          )}
+          {/* Level name */}
+          <View style={[styles.levelBadge, { backgroundColor: difficultyConfig?.color + '20' || meta.color + '20' }]}>
+            <Text style={[styles.levelText, { color: difficultyConfig?.color || meta.color }]}>
+              {levelConfig.name}
+            </Text>
+          </View>
         </View>
         <Text style={[styles.questionCounter, { color: colors.textSecondary }]}>
           {currentIndex + 1} / {questions.length}
@@ -230,7 +247,7 @@ export default function LevelSessionScreen() {
         <View style={[styles.footer, { paddingBottom: insets.bottom + 12, backgroundColor: colors.background }]}>
           <Pressable
             onPress={handleNext}
-            style={[styles.nextButton, { backgroundColor: meta.color }]}>
+            style={[styles.nextButton, { backgroundColor: difficultyConfig?.color || meta.color }]}>
             <Text style={styles.nextButtonText}>
               {isLast ? 'Complete Level' : 'Next Question'}
             </Text>
@@ -250,8 +267,10 @@ export default function LevelSessionScreen() {
         levelName={levelConfig.name}
         correctCount={sessionCorrect}
         totalCount={sessionTotal}
-        categoryColor={meta.color}
+        categoryColor={difficultyConfig?.color || meta.color}
         isLastLevel={isLastLevel}
+        isTierComplete={isLastInTier && !isLastLevel}
+        tierName={tierName}
         onContinue={handleCelebrationClose}
       />
     </View>
@@ -302,6 +321,26 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 20,
     marginBottom: 8,
+  },
+  levelBadgeRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    gap: 8,
+  },
+  difficultyBadge: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    borderRadius: BorderRadius.full,
+    gap: 4,
+  },
+  difficultyText: {
+    color: '#FFFFFF',
+    fontSize: 11,
+    fontWeight: '700',
+    textTransform: 'uppercase',
+    letterSpacing: 0.5,
   },
   levelBadge: {
     flexDirection: 'row',

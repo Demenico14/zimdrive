@@ -28,6 +28,8 @@ interface ConfettiCelebrationProps {
   totalCount: number;
   categoryColor: string;
   isLastLevel?: boolean;
+  isTierComplete?: boolean;
+  tierName?: string;
   onContinue?: () => void;
 }
 
@@ -39,6 +41,8 @@ export function ConfettiCelebration({
   totalCount,
   categoryColor,
   isLastLevel = false,
+  isTierComplete = false,
+  tierName = '',
   onContinue,
 }: ConfettiCelebrationProps) {
   const colorScheme = useColorScheme() ?? 'light';
@@ -179,7 +183,11 @@ export function ConfettiCelebration({
 
           {/* Title */}
           <Text style={[styles.title, { color: colors.text }]}>
-            {isLastLevel ? 'Category Mastered!' : 'Level Complete!'}
+            {isLastLevel 
+              ? 'Category Mastered!' 
+              : isTierComplete 
+              ? `${tierName} Complete!` 
+              : 'Level Complete!'}
           </Text>
 
           {/* Level name */}
@@ -211,6 +219,8 @@ export function ConfettiCelebration({
           <Text style={[styles.message, { color: colors.textSecondary }]}>
             {isLastLevel
               ? "Congratulations! You've mastered all levels in this category."
+              : isTierComplete
+              ? `Amazing! You've completed all ${tierName} levels. The next difficulty is now unlocked!`
               : accuracy >= 90
               ? 'Outstanding performance! Keep up the amazing work!'
               : accuracy >= 75

@@ -7,7 +7,7 @@ import { Colors, BorderRadius } from '@/constants/theme';
 import { CATEGORY_META, getAllCategories, getQuestionsByCategory, type Category } from '@/data/questions';
 import { useCallback, useState } from 'react';
 import { getCategoryStats, type CategoryStats } from '@/lib/storage';
-import { getAllLevelProgress, type CategoryLevelProgress, LEVEL_CONFIG } from '@/lib/levels';
+import { getAllLevelProgress, type CategoryLevelProgress, LEVEL_CONFIG, DIFFICULTY_CONFIG } from '@/lib/levels';
 import { useFocusEffect } from '@react-navigation/native';
 
 export default function CategoriesScreen() {
@@ -86,20 +86,30 @@ export default function CategoriesScreen() {
                     {questionCount} questions
                   </Text>
 
-                  {/* Level progress */}
+                  {/* Difficulty tier progress */}
                   <View style={styles.levelProgressRow}>
-                    <View style={styles.starsRow}>
-                      {Array.from({ length: total }).map((_, i) => (
-                        <MaterialIcons
-                          key={i}
-                          name={i < completed ? 'star' : 'star-border'}
-                          size={16}
-                          color={i < completed ? meta.color : colors.border}
-                        />
-                      ))}
+                    <View style={styles.tierRow}>
+                      <View 
+                        style={[
+                          styles.tierDot, 
+                          { backgroundColor: completed >= 3 ? DIFFICULTY_CONFIG.easy.color : colors.border }
+                        ]} 
+                      />
+                      <View 
+                        style={[
+                          styles.tierDot, 
+                          { backgroundColor: completed >= 6 ? DIFFICULTY_CONFIG.medium.color : colors.border }
+                        ]} 
+                      />
+                      <View 
+                        style={[
+                          styles.tierDot, 
+                          { backgroundColor: completed >= 9 ? DIFFICULTY_CONFIG.hard.color : colors.border }
+                        ]} 
+                      />
                     </View>
                     <Text style={[styles.levelText, { color: colors.textSecondary }]}>
-                      {completed}/{total}
+                      {completed}/{total} levels
                     </Text>
                   </View>
 
@@ -229,9 +239,14 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop: 6,
   },
-  starsRow: {
+  tierRow: {
     flexDirection: 'row',
-    gap: 2,
+    gap: 6,
+  },
+  tierDot: {
+    width: 10,
+    height: 10,
+    borderRadius: 5,
   },
   levelText: {
     fontSize: 12,
