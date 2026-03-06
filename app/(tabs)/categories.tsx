@@ -7,6 +7,7 @@ import { Colors, BorderRadius } from '@/constants/theme';
 import { CATEGORY_META, getAllCategories, getQuestionsByCategory, type Category } from '@/data/questions';
 import { useCallback, useState } from 'react';
 import { getCategoryStats, type CategoryStats } from '@/lib/storage';
+import { getAllLevelProgress, type CategoryLevelProgress, LEVEL_CONFIG } from '@/lib/levels';
 import { useFocusEffect } from '@react-navigation/native';
 
 export default function CategoriesScreen() {
@@ -16,15 +17,26 @@ export default function CategoriesScreen() {
   const colors = Colors[colorScheme];
   const categories = getAllCategories();
   const [stats, setStats] = useState<CategoryStats[]>([]);
+  const [levelProgress, setLevelProgress] = useState<Record<string, CategoryLevelProgress>>({});
 
   useFocusEffect(
     useCallback(() => {
       getCategoryStats().then(setStats);
+      getAllLevelProgress().then(setLevelProgress);
     }, [])
   );
 
   const getStatForCategory = (cat: string) =>
     stats.find((s) => s.category === cat);
+
+  const getLevelProgressForCategory = (cat: string) => {
+    const progress = levelProgress[cat];
+    if (!progress) return { completed: 0, total: LEVEL_CONFIG.length };
+    return { 
+      completed: progress.completedLevels.length, 
+      total: LEVEL_CONFIG.length 
+    };
+  };
 
   return (
     <ScrollView
@@ -32,13 +44,96 @@ export default function CategoriesScreen() {
       contentContainerStyle={{ paddingTop: insets.top + 16, paddingBottom: insets.bottom + 100 }}>
       <Text style={[styles.title, { color: colors.text }]}>Practice by Topic</Text>
       <Text style={[styles.subtitle, { color: colors.textSecondary }]}>
-        Choose a category to start practicing
+        Complete levels to master each category
       </Text>
 
-      <View style={styles.grid}>
+      <View style={styles.categoryList}>
         {categories.map((cat) => {
           const meta = CATEGORY_META[cat];
           const questionCount = getQuestionsByCategory(cat).length;
+          const catStat = getStatForCategory(cat);
+          const { completed, total } = getLevelProgressForCategory(cat);
+          const progressPercent = (completed / total) * 100;
+          const isComplete = completed === total;
+
+          return (
+            <Pressable
+              key={cat}
+              onPress={() => router.push(`/practice/levels/${cat}` as any)}
+              style={[
+                styles.card,
+                { 
+                  backgroundColor: colors.surface, 
+                  borderColor: isComplete ? meta.color : colors.border,
+                  borderWidth: isComplete ? 2 : 1,
+                },
+              ]}>
+              <View style={styles.cardContent}>
+                {/* Icon */}
+                <View style={[styles.iconCircle, { backgroundColor: meta.color + '15' }]}>
+                  <MaterialIcons name={meta.icon as any} size={28} color={meta.color} />
+                  {isComplete && (
+                    <View style={[styles.completeBadge, { backgroundColor: meta.color }]}>
+                      <MaterialIcons name="check" size={12} color="#FFFFFF" />
+                    </View>
+                  )}
+                </View>
+
+                {/* Info */}
+                <View style={styles.cardInfo}>
+                  <Text style={[styles.cardTitle, { color: colors.text }]}>{meta.label}</Text>
+                  <Text style={[styles.cardSub, { color: colors.textSecondary }]}>
+                    {questionCount} questions
+                  </Text>
+
+                  {/* Level progress */}
+                  <View style={styles.levelProgressRow}>
+                    <View style={styles.starsRow}>
+                      {Array.from({ length: total }).map((_, i) => (
+                        <MaterialIcons
+                          key={i}
+                          name={i < completed ? 'star' : 'star-border'}
+                          size={16}
+                          color={i < completed ? meta.color : colors.border}
+                        />
+                      ))}
+                    </View>
+                    <Text style={[styles.levelText, { color: colors.textSecondary }]}>
+                      {completed}/{total}
+                    </Text>
+                  </View>
+
+                  {/* Progress bar */}
+                  <View style={[styles.progressBg, { backgroundColor: colors.border }]}>
+                    <View
+                      style={[
+                        styles.progressFill,
+                        {
+                          width: `${progressPercent}%`,
+                          backgroundColor: meta.color,
+                        },
+                      ]}
+                    />
+                  </View>
+                </View>
+
+                {/* Chevron */}
+                <MaterialIcons name="chevron-right" size={24} color={colors.textSecondary} />
+              </View>
+            </Pressable>
+          );
+        })}
+      </View>
+
+      {/* Free play section */}
+      <Text style={[styles.sectionTitle, { color: colors.text }]}>Free Practice</Text>
+      <Text style={[styles.sectionSubtitle, { color: colors.textSecondary }]}>
+        Practice without level progression
+      </Text>
+
+      <View style={styles.freePlayGrid}>
+        {categories.map((cat) => {
+          const meta = CATEGORY_META[cat];
           const catStat = getStatForCategory(cat);
 
           return (
@@ -46,38 +141,19 @@ export default function CategoriesScreen() {
               key={cat}
               onPress={() => router.push(`/practice/${cat}` as any)}
               style={[
-                styles.card,
+                styles.freePlayCard,
                 { backgroundColor: colors.surface, borderColor: colors.border },
               ]}>
-              <View style={[styles.iconCircle, { backgroundColor: meta.color + '15' }]}>
-                <MaterialIcons name={meta.icon as any} size={28} color={meta.color} />
+              <View style={[styles.freePlayIcon, { backgroundColor: meta.color + '15' }]}>
+                <MaterialIcons name={meta.icon as any} size={22} color={meta.color} />
               </View>
-              <Text style={[styles.cardTitle, { color: colors.text }]}>{meta.label}</Text>
-              <Text style={[styles.cardSub, { color: colors.textSecondary }]}>
-                {questionCount} questions
+              <Text style={[styles.freePlayTitle, { color: colors.text }]} numberOfLines={1}>
+                {meta.label}
               </Text>
               {catStat && catStat.total > 0 && (
-                <View style={styles.statRow}>
-                  <View style={[styles.progressBg, { backgroundColor: colors.border }]}>
-                    <View
-                      style={[
-                        styles.progressFill,
-                        {
-                          width: `${catStat.accuracy}%`,
-                          backgroundColor:
-                            catStat.accuracy >= 70
-                              ? colors.correct
-                              : catStat.accuracy >= 40
-                              ? colors.warning
-                              : colors.wrong,
-                        },
-                      ]}
-                    />
-                  </View>
-                  <Text style={[styles.statText, { color: colors.textSecondary }]}>
-                    {catStat.accuracy}%
-                  </Text>
-                </View>
+                <Text style={[styles.freePlayAccuracy, { color: meta.color }]}>
+                  {catStat.accuracy}%
+                </Text>
               )}
             </Pressable>
           );
@@ -100,52 +176,116 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     marginBottom: 20,
   },
-  grid: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    paddingHorizontal: 14,
+  categoryList: {
+    paddingHorizontal: 16,
     gap: 12,
+    marginBottom: 32,
   },
   card: {
-    width: '47%',
-    padding: 16,
     borderRadius: BorderRadius.lg,
     borderWidth: 1,
-    gap: 8,
+    overflow: 'hidden',
+  },
+  cardContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 16,
+    gap: 14,
   },
   iconCircle: {
-    width: 48,
-    height: 48,
-    borderRadius: 14,
+    width: 56,
+    height: 56,
+    borderRadius: 16,
     justifyContent: 'center',
     alignItems: 'center',
+    position: 'relative',
+  },
+  completeBadge: {
+    position: 'absolute',
+    bottom: -2,
+    right: -2,
+    width: 20,
+    height: 20,
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 2,
+    borderColor: '#FFFFFF',
+  },
+  cardInfo: {
+    flex: 1,
+    gap: 4,
   },
   cardTitle: {
-    fontSize: 15,
+    fontSize: 16,
     fontWeight: '600',
-    marginTop: 4,
   },
   cardSub: {
     fontSize: 13,
   },
-  statRow: {
+  levelProgressRow: {
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 8,
-    marginTop: 4,
+    justifyContent: 'space-between',
+    marginTop: 6,
+  },
+  starsRow: {
+    flexDirection: 'row',
+    gap: 2,
+  },
+  levelText: {
+    fontSize: 12,
+    fontWeight: '600',
   },
   progressBg: {
-    flex: 1,
-    height: 6,
-    borderRadius: 3,
+    height: 4,
+    borderRadius: 2,
     overflow: 'hidden',
+    marginTop: 6,
   },
   progressFill: {
     height: '100%',
-    borderRadius: 3,
+    borderRadius: 2,
   },
-  statText: {
-    fontSize: 12,
+  sectionTitle: {
+    fontSize: 18,
     fontWeight: '600',
+    paddingHorizontal: 20,
+    marginBottom: 4,
+  },
+  sectionSubtitle: {
+    fontSize: 13,
+    paddingHorizontal: 20,
+    marginBottom: 16,
+  },
+  freePlayGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    paddingHorizontal: 14,
+    gap: 10,
+  },
+  freePlayCard: {
+    width: '31%',
+    alignItems: 'center',
+    padding: 12,
+    borderRadius: BorderRadius.md,
+    borderWidth: 1,
+    gap: 6,
+  },
+  freePlayIcon: {
+    width: 40,
+    height: 40,
+    borderRadius: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  freePlayTitle: {
+    fontSize: 11,
+    fontWeight: '500',
+    textAlign: 'center',
+  },
+  freePlayAccuracy: {
+    fontSize: 12,
+    fontWeight: '700',
   },
 });
